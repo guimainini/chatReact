@@ -13,7 +13,7 @@ const AddText = () => {
             console.log('it comes empty');
             return
         }
-        addMessage(user.uid, message)
+        addMessage(user.uid, message, user.mail)
         setMessage('')
     }
 

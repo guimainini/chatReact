@@ -46,13 +46,13 @@ const ChatProvider = (props) => {
             })
     }
 
-    const addMessage = async (uidChat, textoInput) => {
+    const addMessage = async (uidChat, textoInput, userEmail) => {
         try {
             await db.collection('chat').add({
                 fecha: Date.now(),
                 texto: textoInput,
                 uid: uidChat,
-                email: user.email
+                email: userEmail
             })
         } catch (error) {
         console.log(error)
